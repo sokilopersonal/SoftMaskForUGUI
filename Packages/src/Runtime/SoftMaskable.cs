@@ -146,6 +146,8 @@ namespace Coffee.UISoftMask
                 UIExtraCallbacks.onBeforeCanvasRebuild += _checkGraphic ?? (_checkGraphic = CheckGraphic);
             }
 
+            Debug.Log(_maskableMaterial.shader.name);
+
 #if UNITY_EDITOR
             UIExtraCallbacks.onAfterCanvasRebuild +=
                 _updateSceneViewMatrix ?? (_updateSceneViewMatrix = UpdateSceneViewMatrix);
